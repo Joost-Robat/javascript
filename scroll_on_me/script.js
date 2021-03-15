@@ -2,14 +2,16 @@
 function setup(){
   let aantal = 0
   let resetText = "..."
-  let knop0 = document.getElementById('knop0');
+  let button = document.getElementById('button0');
+  let text = document.getElementById('text');
 
-    knop0.addEventListener('wheel', function(){
+    text.addEventListener('wheel', function(){
       aantal +=1
-      document.getElementById('knop0').innerHTML = aantal
+      document.getElementById('text').innerHTML = aantal
   })
-  document.getElementById('button0').addEventListener('click', function(){
+  button.addEventListener('click', function(){
     document.getElementById('text').innerHTML = resetText
+    aantal = 0
   })
 }
 window.addEventListener("DOMContentLoaded", setup);
